@@ -2,38 +2,16 @@ using Microsoft.MixedReality.Toolkit.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ControlUR5 : MonoBehaviour
+namespace Microsoft.MixedReality.Toolkit.Examples.Demos
 {
-    private ObjectManipulator ur5;
-    // Start is called before the first frame update
-    void Start()
+    [AddComponentMenu("Scripts/MRTK/Examples/ShowSliderValue")]
+    public class ControlUR5 : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void OnSliderUpdatedControl1(SliderEventData eventData)
-    {
-        
-    }
-
-    public void OnSliderUpdatedControl2(SliderEventData eventData)
-    {
-       
-    }
-
-    public void OnSliderUpdatedControl3(SliderEventData eventData)
-    {
-        
-    }
-
-    public void OnSliderUpdatedControl4(SliderEventData eventData)
-    {
-
+        public void OnSliderUpdated(SliderEventData eventData)
+        {
+            this.transform.rotation = Quaternion.Euler(0, 0, eventData.NewValue * 100f);
+        }
     }
 }
