@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 public class RotateControl1 : MonoBehaviour
 {
-    public Slider rotationControl1;
-
-    private float angleSliderNumberControl1;
+    public MeshRenderer angleSliderNumberControl1;
 
     void Update()
     {
-        angleSliderNumberControl1 = rotationControl1.value * 10f;
-        this.transform.rotation = Quaternion.Euler(0, 0, angleSliderNumberControl1);
+        
+        this.transform.rotation = Quaternion.Euler(0, 0,float.Parse(angleSliderNumberControl1.ToString()) *10f);
     }
 }
