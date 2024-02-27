@@ -41,6 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011213663360}
+  - component: {fileID: 5681792426919122910}
   m_Layer: 0
   m_Name: control1
   m_TagString: Untagged
@@ -64,6 +65,19 @@ Transform:
   - {fileID: 4000013994921314}
   m_Father: {fileID: 4000011345363096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5681792426919122910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010683783160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee3bd71a3bd4d542be3f8c69661547d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinchSlider: {fileID: 0}
 --- !u!1 &1000011841970662
 GameObject:
   m_ObjectHideFlags: 0
