@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using Microsoft.MixedReality.Toolkit.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 
 
@@ -28,65 +29,51 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos
 
         public void OnSliderUpdated(SliderEventData eventData)
         {
+            float x = 0.0f;
+            float y = 0.0f;
+            float z = 0.0f;
 
             if (this.tag == "Z")
             {
-                transform.rotation = Quaternion.Euler(0.0f, 0.0f, eventData.NewValue * 360f);
+                x = 0.0f;
+                y = 0.0f;
+                z = eventData.NewValue * 100f;
+                transform.rotation = Quaternion.Euler(x, y, z);
             }
             if (this.tag == "X")
             {
-                transform.rotation = Quaternion.Euler(eventData.NewValue * 360f, 90.0f, 90.0f);
-                // transform.Rotate(90.0f, 0.0f, 0.0f, Space.Self)
+                x = eventData.NewValue * 100f;
+                y = 90.0f;
+                z = 90.0f;
+                transform.rotation = Quaternion.Euler(x, y, z);
             }
-            // switch (this.tag)
-            // {
-            //     case "Z":
-            //         transform.rotation = Quaternion.Euler(1, 1, eventData.NewValue * 360f);
-            //         break;
 
-            //     case "X":
-            //         transform.rotation = Quaternion.Euler(eventData.NewValue * 360f, 1, 1);
-            //         Debug.Log(transform.localRotation.eulerAngles.x);
-            //         Debug.Log(transform.localRotation.eulerAngles.y);
-            //         Debug.Log(transform.localRotation.eulerAngles.z);
-            //         break;
-
-            //     case "Y":
-            //         transform.rotation = Quaternion.Euler(1, eventData.NewValue * 360f, 1);
-            //         break;
-
-            //     default:
-            //         Debug.Log("Ta errado");
-            //         break;
-            // }
-
-            // if (eventData.NewValue > 0.5)
-            // {
-            //     float x = 1.0f;
-            //     float y = 2.0f;
-            //     float z = 3.0f;
-
-            //     string json = $"{{\"x\": {x}, \"y\": {y}, \"z\": {z}}}";
-
-            //     StartCoroutine(SendPostRequest(json));
-            // }
+            if (eventData.NewValue > 0.5)
+            {
+                string xString = x.ToString().Replace(",", ".");
+                string yString = y.ToString().Replace(",", ".");
+                string zString = z.ToString().Replace(",", ".");
+                string json = $"{{\"x\": \"{xString}\", \"y\": \"{yString}\", \"z\": \"{zString}\", \"component\": \"{this.name}\" }}";
+                 Debug.Log(json);
+                 StartCoroutine(SendPostRequest(json));
+            }
         }
 
-        // IEnumerator SendPostRequest(string json)
-        // {
-        //     using (UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/receive", json, "application/json"))
-        //     {
-        //         yield return www.SendWebRequest();
+         IEnumerator SendPostRequest(string json)
+         {
+            using (UnityWebRequest www = UnityWebRequest.Post("http://192.168.88.29:8000/coordinates/", json, "application/json"))
+            {
+                yield return www.SendWebRequest();
 
-        //         if (www.result != UnityWebRequest.Result.Success)
-        //         {
-        //             Debug.LogError(www.error);
-        //         }
-        //         else
-        //         {
-        //             Debug.Log("Form upload complete!");
-        //         }
-        //     }
-        // }
+                 if (www.result != UnityWebRequest.Result.Success)
+                 {
+                     Debug.LogError(www.error);
+                 }
+                 else
+                 {
+                    Debug.Log("Form upload complete!");
+                 }
+             }
+         }
     }
 }
