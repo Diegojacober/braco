@@ -21,7 +21,7 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos
 
             if (eventData.NewValue > 0.5)
             {
-                float x = 1.0f;
+                float x = 1.0f; 
                 float y = 2.0f;
                 float z = 3.0f;
 
