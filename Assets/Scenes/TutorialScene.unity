@@ -197,7 +197,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderValue
-      value: 0.25
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderEndDistance
@@ -616,7 +616,6 @@ GameObject:
   - component: {fileID: 389022970}
   - component: {fileID: 389022973}
   - component: {fileID: 389022972}
-  - component: {fileID: 389022971}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -633,33 +632,12 @@ Transform:
   m_GameObject: {fileID: 389022969}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.091, y: 0, z: 0.754}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_LocalPosition: {x: -1.051, y: -0.24, z: 0.716}
+  m_LocalScale: {x: 1.25, y: 1.81, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1217928923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &389022971
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389022969}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &389022972
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -680,7 +658,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 45f42ce50e098a34b874641b1b5787f8, type: 2}
+  - {fileID: 2100000, guid: abcba99d2a26d4d4ab49f635cfee4a93, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1145,9 +1123,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1000011841970662, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1771346872}
-    - targetCorrespondingSourceObject: {fileID: 1000011841970662, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1771346871}
     - targetCorrespondingSourceObject: {fileID: 1000011841970662, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
       insertIndex: -1
@@ -1155,6 +1130,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1000011841970662, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1771346874}
+    - targetCorrespondingSourceObject: {fileID: 1000011841970662, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1771346876}
+    - targetCorrespondingSourceObject: {fileID: 1000011841970662, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1771346875}
     - targetCorrespondingSourceObject: {fileID: 1000012197370310, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
       insertIndex: -1
       addedObject: {fileID: 12072901}
@@ -1196,7 +1177,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderValue
-      value: 0.25
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderEndDistance
@@ -1560,6 +1541,7 @@ GameObject:
   - component: {fileID: 1217928921}
   - component: {fileID: 1217928920}
   - component: {fileID: 1217928924}
+  - component: {fileID: 1217928925}
   m_Layer: 0
   m_Name: Controlers
   m_TagString: Untagged
@@ -1647,7 +1629,7 @@ Transform:
   m_GameObject: {fileID: 1217928919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.337, y: 0.26905084, z: 5.498}
+  m_LocalPosition: {x: 0.337, y: 0.26905084, z: 2.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1679,6 +1661,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.27, y: 1.68, z: 0.1}
   m_Center: {x: -1.06, y: -0.23, z: 0.7}
+--- !u!1818360609 &1217928925
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217928919}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_Active: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 0}
+    weight: 1
 --- !u!1001 &1298850385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1689,7 +1691,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderValue
-      value: 0.25
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderEndDistance
@@ -2099,20 +2101,6 @@ MonoBehaviour:
   autoConstraintSelection: 1
   selectedConstraints:
   - {fileID: 0}
---- !u!114 &1771346872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771346869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5afd5316c63705643b3daba5a6e923bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTetherWhenManipulating: 0
-  IsBoundsHandles: 0
 --- !u!4 &1771346873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012682584628, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
@@ -2139,6 +2127,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.94, y: 3.37, z: 5.36}
   m_Center: {x: 3.31, y: 0.7, z: -1.56}
+--- !u!114 &1771346875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771346869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f754b02c9d6221d47b2bd3750729b3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimumDistance: 5
+--- !u!1818360609 &1771346876
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771346869}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 90}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_Active: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 0}
+    weight: 1
 --- !u!1001 &1934214774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2149,7 +2170,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderValue
-      value: 0.25
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderEndDistance
