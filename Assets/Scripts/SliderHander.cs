@@ -54,26 +54,26 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos
                 string yString = y.ToString().Replace(",", ".");
                 string zString = z.ToString().Replace(",", ".");
                 string json = $"{{\"x\": \"{xString}\", \"y\": \"{yString}\", \"z\": \"{zString}\", \"component\": \"{this.name}\" }}";
-                 Debug.Log(json);
-                 StartCoroutine(SendPostRequest(json));
+                Debug.Log(json);
+                StartCoroutine(SendPostRequest(json));
             }
         }
 
-         IEnumerator SendPostRequest(string json)
-         {
+        IEnumerator SendPostRequest(string json)
+        {
             using (UnityWebRequest www = UnityWebRequest.Post("http://192.168.88.29:8000/coordinates/", json, "application/json"))
             {
                 yield return www.SendWebRequest();
 
-                 if (www.result != UnityWebRequest.Result.Success)
-                 {
-                     Debug.LogError(www.error);
-                 }
-                 else
-                 {
+                if (www.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.LogError(www.error);
+                }
+                else
+                {
                     Debug.Log("Form upload complete!");
-                 }
-             }
-         }
+                }
+            }
+        }
     }
 }
