@@ -205,7 +205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderStartDistance
-      value: -0.100000024
+      value: -0.100000046
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderStepDivisions
@@ -573,38 +573,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &375569491 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000013055860116, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
-  m_PrefabInstance: {fileID: 436544127}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &375569501
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375569491}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &389022969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1048,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011047276988, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abcba99d2a26d4d4ab49f635cfee4a93, type: 2}
     - target: {fileID: 64000010137715996, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -1157,15 +1129,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1000012637331030, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1368025989}
-    - targetCorrespondingSourceObject: {fileID: 1000011958557302, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1749228558}
     - targetCorrespondingSourceObject: {fileID: 1000010391361312, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 633827903}
-    - targetCorrespondingSourceObject: {fileID: 1000013055860116, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 375569501}
+      addedObject: {fileID: 1799881836}
   m_SourcePrefab: {fileID: 100100000, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
 --- !u!1001 &454541372
 PrefabInstance:
@@ -1185,7 +1151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderStartDistance
-      value: -0.100000024
+      value: -0.100000046
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderStepDivisions
@@ -1447,23 +1413,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &633827898 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000010391361312, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
-  m_PrefabInstance: {fileID: 436544127}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &633827903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633827898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ee3bd71a3bd4d542be3f8c69661547d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &667059085 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 48114245917028294, guid: 405b34842e32594499069ff558f96b82, type: 3}
@@ -1629,7 +1578,7 @@ Transform:
   m_GameObject: {fileID: 1217928919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.337, y: 0.26905084, z: 2.58}
+  m_LocalPosition: {x: 0.506, y: 0.26905084, z: 2.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1668,14 +1617,14 @@ RotationConstraint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217928919}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Weight: 1
   m_RotationAtRest: {x: 0, y: 0, z: 0}
   m_RotationOffset: {x: 0, y: 0, z: 0}
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
+  m_AffectRotationX: 0
+  m_AffectRotationY: 0
+  m_AffectRotationZ: 0
   m_Active: 1
   m_IsLocked: 0
   m_Sources:
@@ -1699,7 +1648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderStartDistance
-      value: -0.100000024
+      value: -0.100000046
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderStepDivisions
@@ -1711,7 +1660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1724,10 +1673,10 @@ PrefabInstance:
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 633827903}
+      objectReference: {fileID: 1799881836}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnSlideChange
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -1735,7 +1684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SliderHander, Assembly-CSharp
+      value: Microsoft.MixedReality.Toolkit.Examples.Demos.ControlUR5, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -2006,38 +1955,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1749228548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000011958557302, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
-  m_PrefabInstance: {fileID: 436544127}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1749228558
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749228548}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1771346869 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011841970662, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
@@ -2160,6 +2077,23 @@ RotationConstraint:
   m_Sources:
   - sourceTransform: {fileID: 0}
     weight: 1
+--- !u!1 &1799881834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010391361312, guid: 5a0f46b23c6d65f49ab422a6ac75f635, type: 3}
+  m_PrefabInstance: {fileID: 436544127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1799881836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799881834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee3bd71a3bd4d542be3f8c69661547d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1934214774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2178,7 +2112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderStartDistance
-      value: -0.100000024
+      value: -0.100000046
       objectReference: {fileID: 0}
     - target: {fileID: 48114245917028293, guid: 405b34842e32594499069ff558f96b82, type: 3}
       propertyPath: sliderStepDivisions

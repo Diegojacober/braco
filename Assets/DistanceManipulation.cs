@@ -5,29 +5,29 @@ using UnityEngine;
 
 public class DistanceManipulation : MonoBehaviour
 {
-    public float minimumDistance = 1f; // Distância mínima para permitir a manipulação (em metros)
+    public float minimumDistance = 1f; // Distï¿½ncia mï¿½nima para permitir a manipulaï¿½ï¿½o (em metros)
     private ObjectManipulator objectManipulator;
     private Camera mainCamera;
 
     private void Start()
     {
-        // Obtém ou adiciona o componente ObjectManipulator
+        // Obtï¿½m ou adiciona o componente ObjectManipulator
         objectManipulator = GetComponent<ObjectManipulator>();
         if (objectManipulator == null)
         {
             objectManipulator = gameObject.AddComponent<ObjectManipulator>();
         }
 
-        // Obter a referência para a câmera principal
+        // Obter a referï¿½ncia para a cï¿½mera principal
         mainCamera = Camera.main;
     }
 
     private void Update()
     {
-        // Verifica a distância entre o objeto e a câmera principal
+        // Verifica a distï¿½ncia entre o objeto e a cï¿½mera principal
         float distanceToCamera = Vector3.Distance(mainCamera.transform.position, transform.position);
 
-        // Se a distância for menor que a distância mínima, desabilita a manipulação
+        // Se a distï¿½ncia for menor que a distï¿½ncia mï¿½nima, desabilita a manipulaï¿½ï¿½o
         if (distanceToCamera < minimumDistance)
         {
             objectManipulator.enabled = false;

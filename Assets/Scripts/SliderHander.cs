@@ -37,15 +37,17 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos
             {
                 x = 0.0f;
                 y = 0.0f;
-                z = eventData.NewValue * 100f;
+                z = eventData.NewValue * 90f;
                 transform.rotation = Quaternion.Euler(x, y, z);
             }
             if (this.tag == "X")
             {
-                x = eventData.NewValue * 100f;
-                y = 90.0f;
-                z = 90.0f;
-                transform.rotation = Quaternion.Euler(x, y, z);
+                Debug.Log(transform.rotation.x);
+                x = eventData.NewValue * 90f;
+                y = 180.0f;
+                z = 180.0f;
+                // transform.rotation = Quaternion.Euler(x, y, z);
+                Debug.Log(transform.rotation.x);
             }
 
             if (eventData.NewValue > 0.5)
@@ -61,17 +63,20 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos
 
         IEnumerator SendPostRequest(string json)
         {
-            using (UnityWebRequest www = UnityWebRequest.Post("http://192.168.88.29:8000/coordinates/", json, "application/json"))
+            if (this.tag == "Z")
             {
-                yield return www.SendWebRequest();
+                using (UnityWebRequest www = UnityWebRequest.Post("http://192.168.88.199:8000/coordinates/", json, "application/json"))
+                {
+                    yield return www.SendWebRequest();
 
-                if (www.result != UnityWebRequest.Result.Success)
-                {
-                    Debug.LogError(www.error);
-                }
-                else
-                {
-                    Debug.Log("Form upload complete!");
+                    if (www.result != UnityWebRequest.Result.Success)
+                    {
+                        Debug.LogError(www.error);
+                    }
+                    else
+                    {
+                        Debug.Log("Form upload complete!");
+                    }
                 }
             }
         }
