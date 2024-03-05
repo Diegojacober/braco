@@ -33,21 +33,33 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos
             float y = 0.0f;
             float z = 0.0f;
 
-            if (this.tag == "Z")
+            if (this.tag == "Z1")
             {
                 x = 0.0f;
                 y = 0.0f;
-                z = eventData.NewValue * 90f;
+                z = (eventData.NewValue * 90f) + 45f;
+                transform.rotation = Quaternion.Euler(x, y, z);
+            }
+            if (this.tag == "Z2")
+            {
+                x = 0.0f;
+                y = 0.0f;
+                z = (eventData.NewValue * 90f) - 45f;
+                transform.rotation = Quaternion.Euler(x, y, z);
+            }
+            if (this.tag == "Z3")
+            {
+                x = 0.0f;
+                y = 0.0f;
+                z = (eventData.NewValue * 90f);
                 transform.rotation = Quaternion.Euler(x, y, z);
             }
             if (this.tag == "X")
             {
-                Debug.Log(transform.rotation.x);
                 x = eventData.NewValue * 90f;
                 y = 180.0f;
                 z = 180.0f;
-                // transform.rotation = Quaternion.Euler(x, y, z);
-                Debug.Log(transform.rotation.x);
+                transform.rotation = Quaternion.Euler(x, y, z);
             }
 
             if (eventData.NewValue > 0.5)

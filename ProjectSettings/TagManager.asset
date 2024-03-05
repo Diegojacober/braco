@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Z
   - X
   - Z1
+  - Z2
+  - Z3
   layers:
   - Default
   - TransparentFX
