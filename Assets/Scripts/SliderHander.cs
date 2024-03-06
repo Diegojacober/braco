@@ -21,10 +21,10 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos
 
         void Start()
         {
-            if (this.tag == "X")
-            {
-                transform.Rotate(0.0f, 0.0f, 0.0f, Space.Self);
-            }
+            // if (this.tag == "X")
+            // {
+            //     transform.Rotate(0.0f, 0.0f, 0.0f, Space.Self);
+            // }
         }
 
         public void OnSliderUpdated(SliderEventData eventData)
@@ -75,22 +75,23 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos
 
         IEnumerator SendPostRequest(string json)
         {
-            if (this.tag == "Z")
-            {
-                using (UnityWebRequest www = UnityWebRequest.Post("http://192.168.88.199:8000/coordinates/", json, "application/json"))
-                {
-                    yield return www.SendWebRequest();
 
-                    if (www.result != UnityWebRequest.Result.Success)
-                    {
-                        Debug.LogError(www.error);
-                    }
-                    else
-                    {
-                        Debug.Log("Form upload complete!");
-                    }
+
+            using (UnityWebRequest www = UnityWebRequest.Post("http://192.168.88.54:8000/coordinates/", json, "application/json"))
+            {
+                Debug.Log("aasas");
+                yield return www.SendWebRequest();
+
+                if (www.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.LogError(www.error);
+                }
+                else
+                {
+                    Debug.Log("Form upload complete!");
                 }
             }
+
         }
     }
 }
