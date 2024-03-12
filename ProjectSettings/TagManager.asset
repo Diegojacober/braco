@@ -8,6 +8,10 @@ TagManager:
   - Z1
   - Z2
   - Z3
+  - sliderCtrlZ1
+  - sliderCtrlZ2
+  - sliderCtrlZ3
+  - sliderCtrlZ4
   layers:
   - Default
   - TransparentFX
