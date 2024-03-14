@@ -63,7 +63,7 @@ public class ButtonPressed : MonoBehaviour
     {
 
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://192.168.88.205:8000/coordinates", json, "application/json"))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://192.168.88.81:8000/coordinates", json, "application/json"))
         {
             yield return www.SendWebRequest();
 
